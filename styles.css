@@ -15,9 +15,9 @@ body, a:link, a:visited, a:active{
 }
 
 .bgPic{
-  background-image: url("https://external-preview.redd.it/Rq30KC25tOtK0XOXMpHov2BxIXnPTc8H7UCe6RdvrGY.jpg?auto=webp&s=8b0076c7a1094c451a022b5913d46e3068373f84");
-  background-size: 100%;
-  opacity: 1; 
+  background-image: url("media/junglebackground.jpg");
+  background-size: contain;
+  background-repeat: repeat;
 }
 
 .topbar{
@@ -35,6 +35,13 @@ body, a:link, a:visited, a:active{
 
 .crazy{
 
+}
+
+.firefly{
+  content: url("media/firefly.png");
+  height: 100px;
+  width: auto;
+  position: absolute;
 }
 
 .panda{
