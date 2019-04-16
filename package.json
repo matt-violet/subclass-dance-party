@@ -1,0 +1,22 @@
+{
+  "name": "hrsf117-subclass-dance-party",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gniaaa/hrsf117-subclass-dance-party.git"
+  },
+  "keywords": [],
+  "author": "eugenia and matt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gniaaa/hrsf117-subclass-dance-party/issues"
+  },
+  "homepage": "https://github.com/gniaaa/hrsf117-subclass-dance-party#readme"
+}

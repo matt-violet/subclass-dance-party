@@ -13,6 +13,13 @@ body, a:link, a:visited, a:active{
   padding:5px 12px;
   float:right;
 }
+
+.bgPic{
+  background-image: url("https://external-preview.redd.it/Rq30KC25tOtK0XOXMpHov2BxIXnPTc8H7UCe6RdvrGY.jpg?auto=webp&s=8b0076c7a1094c451a022b5913d46e3068373f84");
+  background-size: 100%;
+  opacity: 1; 
+}
+
 .topbar{
   height:32px;
   background-color: #555;
@@ -24,4 +31,32 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+
+.crazy{
+  image: url("https://banner2.kisspng.com/20181203/foc/kisspng-giant-panda-book-pig-great-dane-blog-5c05aa62d87b98.9854978215438751708867.jpg"); 
+
+  position:absolute;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
