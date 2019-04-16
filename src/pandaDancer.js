@@ -11,6 +11,4 @@ makePandaDancer.prototype.oldStep = makePandaDancer.prototype.step;
 
 makePandaDancer.prototype.step = function () {
   this.oldStep();
-  // this.$node.toggle();
-  //setTimeout(this.step.bind(this), this.timeBetweenSteps * 5);
 };

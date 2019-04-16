@@ -14,3 +14,4 @@ makeSlothDancer.prototype.step = function () {
   // this.$node.toggle();
   //setTimeout(this.step.bind(this), this.timeBetweenSteps * 5);
 };
+

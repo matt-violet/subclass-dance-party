@@ -21,3 +21,14 @@ makeDancer.prototype.setPosition = function (top, left) {
   this.$node.css(styleSettings);
 };
 
+makeDancer.prototype.lineUp = function () {
+  var top = $("body").height() - 200;
+  var left = Math.random() * $("body").width();
+  this.setPosition(top, left);
+};
+
+makeDancer.prototype.partyUp = function () {
+  var top = ($("body").height() - 100) * Math.random();
+  var left = ($("body").width() - 100) * Math.random();
+  this.setPosition(top, left);
+};
