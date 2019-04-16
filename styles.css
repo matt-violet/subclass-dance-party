@@ -34,14 +34,21 @@ body, a:link, a:visited, a:active{
 }
 
 .crazy{
-  image: url("https://banner2.kisspng.com/20181203/foc/kisspng-giant-panda-book-pig-great-dane-blog-5c05aa62d87b98.9854978215438751708867.jpg"); 
 
-  position:absolute;
+}
+
+.panda{
+  content: url("media/panda.png"); 
+  height: 200px;
+  width: auto;
+  position: absolute;
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  animation-iteration-count: infinite;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
 }
+
 
 @keyframes shake {
   10%, 90% {
@@ -59,4 +66,58 @@ body, a:link, a:visited, a:active{
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
+} 
+
+
+.sloth {
+  content: url("media/sloth.png"); 
+  height: 200px;
+  width: auto;
+  /* Animation to spin and move the sphere */
+  -webkit-animation: spin 3000ms linear infinite, moveLeftToRight 25s linear infinite;
+  -moz-animation: spin 3000ms linear infinite, moveLeftToRight 25s linear infinite;
+  -ms-animation: spin 3000ms linear infinite, moveLeftToRight 25s linear infinite;
+  animation: spin 3000ms linear infinite, moveLeftToRight 25s linear infinite;
+  
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease;
+  
+  position: absolute;
+  left: 0;
+}
+  
+  /* Spinning the sphere using key frames */
+@-ms-keyframes spin {
+  from { -ms-transform: rotate(0deg); }
+  to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+
+/* Move sphere from left to right */
+@-moz-keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
+}
+@-ms-keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
+}
+@keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
+}
+@-webkit-keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
 }

@@ -1,5 +1,5 @@
 
-var makeCrazyDancer = function(top, left, timeBetweenSteps) {
+var makeCrazyDancer = function (top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.$node = $('<span class="crazy"></span>');
   this.setPosition(top, left);
@@ -9,13 +9,8 @@ makeCrazyDancer.prototype = Object.create(makeDancer.prototype);
 makeCrazyDancer.prototype.constructor = makeCrazyDancer;
 makeCrazyDancer.prototype.oldStep = makeCrazyDancer.prototype.step;
 
-makeCrazyDancer.prototype.step = function() {
+makeCrazyDancer.prototype.step = function () {
   this.oldStep();
-  this.$node.toggle("slow");
+  // this.$node.toggle();
   //setTimeout(this.step.bind(this), this.timeBetweenSteps * 5);
 };
-
-
-
-//===========================================================
-
