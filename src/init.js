@@ -23,8 +23,8 @@ $(document).ready(function () {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      ($("body").height() - 100) * Math.random(),
-      ($("body").width() - 100) * Math.random(),
+      ($('body').height() - 100) * Math.random(),
+      ($('body').width() - 100) * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
@@ -32,16 +32,23 @@ $(document).ready(function () {
     dancers.push(dancer);
   });
 
-  $(".lineUp").on('click', function (event) {
+  $('.lineUp').on('click', function (event) {
     for (var i = 0; i < dancers.length; i++) {
       dancers[i].lineUp();
     }
   });
 
-  $(".partyUp").on('click', function (event) {
+  $('.partyUp').on('click', function (event) {
     for (var i = 0; i < dancers.length; i++) {
       dancers[i].partyUp();
     }
+  });
+
+  $('.coupleUp').on('click', function(event) {
+    // loop thru dancers
+    for (var i = 1; i < dancers.length; i = i + 2) {
+      dancers[i].setPosition(dancers[i - 1].top, dancers[i - 1].left - 10);
+    }   
   });
 
 });
