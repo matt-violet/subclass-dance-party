@@ -12,3 +12,9 @@ makePandaDancer.prototype.oldStep = makePandaDancer.prototype.step;
 makePandaDancer.prototype.step = function () {
   this.oldStep();
 };
+
+makePandaDancer.prototype.gatherUp = function () {
+  var top = $("body").height() - 200;
+  var left = 800 + (Math.random() * 200);
+  this.setPosition(top, left);
+};

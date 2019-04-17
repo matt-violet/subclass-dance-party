@@ -30,11 +30,85 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+
 .dancer{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
+
+/* MONKEY */
+
+.monkey{
+  content: url("media/monkey.png");
+  height: 150px;
+  width: auto;
+  position: absolute;
+
+  -webkit-animation: wobble-hor-bottom 0.8s infinite both;
+	animation: wobble-hor-bottom 0.8s infinite both;
+}
+
+@-webkit-keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+/* FIREFLY */
 
 .firefly{
   content: url("media/firefly.png");
@@ -42,6 +116,8 @@ body, a:link, a:visited, a:active{
   width: auto;
   position: absolute;
 }
+
+/* PANDA */
 
 .panda{
   content: url("media/panda.png"); 
@@ -55,6 +131,32 @@ body, a:link, a:visited, a:active{
   perspective: 1000px;
 }
 
+/* .panda:hover .bamboo{
+  visibility: visible;
+  opacity: 1;
+}*/
+
+/* Tooltip text 
+.panda .bamboo{
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text 
+  position: absolute;
+  z-index: 9999999999;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip
+  opacity: 0;
+  transition: opacity 0.3s;
+} */
 
 @keyframes shake {
   10%, 90% {
@@ -74,24 +176,50 @@ body, a:link, a:visited, a:active{
   }
 } 
 
+/* SLOTH */
 
 .sloth {
   content: url("media/sloth.png"); 
   height: 200px;
   width: auto;
-  /* Animation to spin and move the sphere */
-  -webkit-animation: spin 3000ms linear infinite, moveLeftToRight 25s linear infinite;
-  -moz-animation: spin 3000ms linear infinite, moveLeftToRight 25s linear infinite;
-  -ms-animation: spin 3000ms linear infinite, moveLeftToRight 25s linear infinite;
-  animation: spin 3000ms linear infinite, moveLeftToRight 25s linear infinite;
+  position: absolute;
+
+  -webkit-animation: spin 3s linear infinite;
+  -moz-animation: spin 3s linear infinite;
+  -ms-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
   
   -webkit-transition: all 3s ease;
-  transition: all 3s ease;
-  
-  position: absolute;
+  transition: all 3s ease;  
   left: 0;
+  position: absolute;
 }
+
+.roll {
+  -webkit-animation: spin 3s linear infinite, moveLeftToRight 25s linear infinite;
+  -moz-animation: spin 3s linear infinite, moveLeftToRight 25s linear infinite;
+  -ms-animation: spin 3s linear infinite, moveLeftToRight 25s linear infinite;
+  animation: spin 3s linear infinite, moveLeftToRight 25s linear infinite;
   
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease;  
+  left: 0;
+  position: absolute;
+}
+
+/* .quote {
+  height: 30px;
+  width: 70px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  color: #173F5F;
+  background-color: #F6D55C;
+  opacity: 0.6;
+  z-index: 1000;
+  margin-top: 50px;
+} */
+
+
   /* Spinning the sphere using key frames */
 @-ms-keyframes spin {
   from { -ms-transform: rotate(0deg); }
@@ -127,6 +255,10 @@ body, a:link, a:visited, a:active{
   0%   { left: -100px; }
   100% { left: 100%; }
 }
+
+
+
+
 
 
 

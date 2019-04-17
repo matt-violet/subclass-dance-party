@@ -32,6 +32,20 @@ $(document).ready(function () {
     dancers.push(dancer);
   });
 
+  $('.addRandomDancerButton').on('click', function(event) {
+      var typeOfDancers = ['makePandaDancer', 'makeFireflyDancer', 'makeSlothDancer', 'makeMonkeyDancer'];
+      var index = Math.floor(Math.random() * typeOfDancers.length);
+      var dancerMakerFunction = window[typeOfDancers[index]];
+      var dancer = new dancerMakerFunction(
+        ($('body').height() - 100) * Math.random(),
+        ($('body').width() - 100) * Math.random(),
+        Math.random() * 1000
+      );
+      $('body').append(dancer.$node);
+  
+      dancers.push(dancer);
+  });
+
   $('.lineUp').on('click', function (event) {
     for (var i = 0; i < dancers.length; i++) {
       dancers[i].lineUp();
@@ -47,9 +61,21 @@ $(document).ready(function () {
   $('.coupleUp').on('click', function(event) {
     // loop thru dancers
     for (var i = 1; i < dancers.length; i = i + 2) {
-      dancers[i].setPosition(dancers[i - 1].top, dancers[i - 1].left - 10);
+      dancers[i].setPosition(dancers[i - 1].top, dancers[i - 1].left - 5);
     }   
   });
+
+  $('.gatherUp').on('click', function (event) {
+    for (var i = 0; i < dancers.length; i++) {
+      dancers[i].gatherUp();
+    }
+  });
+
+  // $('body').on('click', '.sloth', function(event) {
+  //   event.preventDefault();
+  //   console.log("hi")
+  //   $('.sloth').append('<div class="quote">let me sleep!</div>');
+  // });
 
 });
 

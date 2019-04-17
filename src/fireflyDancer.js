@@ -12,5 +12,10 @@ makeFireflyDancer.prototype.oldStep = makeFireflyDancer.prototype.step;
 makeFireflyDancer.prototype.step = function () {
   this.oldStep();
   this.$node.toggle();
-  //setTimeout(this.step.bind(this), this.timeBetweenSteps * 5);
+};
+
+makeFireflyDancer.prototype.gatherUp = function () {
+  var top = 200;
+  var left = 800 + (Math.random() * 200);
+  this.setPosition(top, left);
 };
