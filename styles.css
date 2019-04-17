@@ -130,15 +130,14 @@ body, a:link, a:visited, a:active{
   backface-visibility: hidden;
   perspective: 1000px;
 }
-
-/* .panda:hover .bamboo{
-  visibility: visible;
+/*
+.panda:hover .bamboo{
+  display: block;
   opacity: 1;
-}*/
+}
 
-/* Tooltip text 
 .panda .bamboo{
-  visibility: hidden;
+  display: none;
   width: 120px;
   background-color: #555;
   color: #fff;
@@ -146,17 +145,17 @@ body, a:link, a:visited, a:active{
   padding: 5px 0;
   border-radius: 6px;
 
-  /* Position the tooltip text 
+
   position: absolute;
   z-index: 9999999999;
   bottom: 125%;
   left: 50%;
   margin-left: -60px;
 
-  /* Fade in tooltip
+
   opacity: 0;
   transition: opacity 0.3s;
-} */
+}*/
 
 @keyframes shake {
   10%, 90% {

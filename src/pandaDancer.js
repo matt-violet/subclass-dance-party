@@ -2,6 +2,7 @@
 var makePandaDancer = function (top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.$node = $('<span class="panda"></span>');
+  //this.$node = $('<span class="panda"><p class="text">Bamboo please!</p></span>');
   this.setPosition(top, left);
 };
 

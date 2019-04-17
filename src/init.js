@@ -33,17 +33,17 @@ $(document).ready(function () {
   });
 
   $('.addRandomDancerButton').on('click', function(event) {
-      var typeOfDancers = ['makePandaDancer', 'makeFireflyDancer', 'makeSlothDancer', 'makeMonkeyDancer'];
-      var index = Math.floor(Math.random() * typeOfDancers.length);
-      var dancerMakerFunction = window[typeOfDancers[index]];
-      var dancer = new dancerMakerFunction(
-        ($('body').height() - 100) * Math.random(),
-        ($('body').width() - 100) * Math.random(),
-        Math.random() * 1000
-      );
-      $('body').append(dancer.$node);
-  
-      dancers.push(dancer);
+    var typeOfDancers = ['makePandaDancer', 'makeFireflyDancer', 'makeSlothDancer', 'makeMonkeyDancer'];
+    var index = Math.floor(Math.random() * typeOfDancers.length);
+    var dancerMakerFunction = window[typeOfDancers[index]];
+    var dancer = new dancerMakerFunction(
+      ($('body').height() - 100) * Math.random(),
+      ($('body').width() - 100) * Math.random(),
+      Math.random() * 1000
+    );
+    $('body').append(dancer.$node);
+
+    dancers.push(dancer);
   });
 
   $('.lineUp').on('click', function (event) {
@@ -71,11 +71,10 @@ $(document).ready(function () {
     }
   });
 
-  // $('body').on('click', '.sloth', function(event) {
-  //   event.preventDefault();
-  //   console.log("hi")
-  //   $('.sloth').append('<div class="quote">let me sleep!</div>');
+  // $('.panda').on('mouseover', function (event) {
+  //   $('.panda.text').toggle();
   // });
+
 
 });
 
